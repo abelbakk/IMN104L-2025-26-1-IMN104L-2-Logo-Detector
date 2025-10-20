@@ -1,0 +1,16 @@
+[logger]
+level = "info"
+
+[client]
+showSidebarNavigation = false
+showErrorDetails = "none"
+toolbarMode = "minimal"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"

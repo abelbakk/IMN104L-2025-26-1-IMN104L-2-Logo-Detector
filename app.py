@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image, ImageDraw
-from model.model import MockModel
+from model.mock_model import MockModel
 
 st.set_page_config(page_title="Brand Logo Detector", layout="centered", menu_items=None)
 

@@ -1,6 +1,7 @@
 import streamlit as st
 from collections import defaultdict
 import math
+import os
 
 st.title("Supported Brands")
 st.caption("SZTE IMN104L-2025/26/1-IMN104L-2")
@@ -8,7 +9,8 @@ st.caption("SZTE IMN104L-2025/26/1-IMN104L-2")
 st.write("This page shows the brands supported by the brand logo detector.")
 st.write("")
 
-classes_file = "resources/classes.txt"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+classes_file = os.path.join(base_dir, "../resources/classes.txt")
 
 num_cols = 3
 

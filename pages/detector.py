@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
-from model.mock_model import MockModel
+# from model.mock_model import MockModel
+from model.yolo_model import YoloModel
 
 BBOX_COLORS = [
     "#E6194B",
@@ -12,7 +13,7 @@ BBOX_COLORS = [
 
 @st.cache_resource
 def load_model():
-    return MockModel()
+    return YoloModel()
 
 def draw_detection(draw, det, image_height, color):
     x1, y1, x2, y2 = det["bbox"]
@@ -60,5 +61,5 @@ if uploaded_file is not None:
             classes.append(f"{det['class']} ({det['confidence']})")
             draw_detection(draw, det, image.height, BBOX_COLORS[i % len(BBOX_COLORS)])
 
-        st.write(f"Found the following classes (with confidence): {", ".join(classes)}")
+        st.write(f"Found the following classes (with confidence): {', '.join(classes)}")
         st.image(image, caption="Output", width="content")

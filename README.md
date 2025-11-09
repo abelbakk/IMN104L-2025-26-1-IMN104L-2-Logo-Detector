@@ -1,3 +1,5 @@
 # SZTE IMN104L-2025/26/1-IMN104L-2 Logo Detector
 
-Use `docker-compose up dev` or `docker-compose up prod`.
+Use `docker-compose build --no-cache dev`. Use `docker-compose up dev`. Similar can be done for 'prod'.
+
+To run locally, add `ultralytics` to `requirements.txt`. Otherwise an environment which contains it is fine, like the docker image we have.

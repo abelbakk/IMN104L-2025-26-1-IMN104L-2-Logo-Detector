@@ -1,4 +1,7 @@
 import streamlit as st
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 st.set_page_config(page_title="Brand Logo Detector", layout="centered", menu_items=None)
 

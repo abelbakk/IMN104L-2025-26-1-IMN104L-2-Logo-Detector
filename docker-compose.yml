@@ -1,10 +1,10 @@
 services:
-  dev:
+  detector:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
-      - "9080:9080"
+      - "8080:8080"
     volumes:
       - .:/app
     environment:

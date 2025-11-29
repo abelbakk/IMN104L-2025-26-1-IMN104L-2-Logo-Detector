@@ -7,6 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 9080
+EXPOSE 8080
 
-CMD ["streamlit", "run", "app.py", "--server.port=9080", "--server.address=0.0.0.0", "--server.fileWatcherType=watchdog"]
+CMD ["streamlit", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0", "--server.fileWatcherType=watchdog"]

@@ -8,7 +8,7 @@ class YoloModel:
 
     def __init__(self):
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        weights_path = os.path.join(base_dir, "../resources/weights/small/best.pt")
+        weights_path = os.path.join(base_dir, "../resources/weights/small/tuned_06.pt")
         logger.info(f"Loading YOLO model from: {weights_path}")
         try:
             self.model = YOLO(weights_path)
